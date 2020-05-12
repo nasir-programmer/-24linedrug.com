@@ -3,6 +3,13 @@
 <!-- {{ asset('xxxxxx') }} -->
 <head>
   <base href="http://24linedrug.com">
+  @laravelPWA
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#000000">
+
+<!-- Add to homescreen for Chrome on Android -->
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="application-name" content="PWA">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -103,6 +110,11 @@
                                 </a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link" href="{{ Route('booking')}}">   
+                                    Booking
+                                </a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" href="{{ Route('contact')}}">   
                                     Contact
                                 </a>
@@ -122,7 +134,7 @@
                                     <i class="icofont-envelope"></i>
                                 </div>
                                 <div class="media-body">
-                                    <a href="#" class="text-default text-Underline">mail@medim.com</a>
+                                    <a href="#" class="text-default text-Underline"><?= env('EMAIL','hoststudioz@gmail.com')?></a>
                                 </div>
                             </div>
                             <div class="media align-items-center d-inline-flex">
@@ -130,7 +142,7 @@
                                    <i class="icofont-ui-call"></i>
                                 </div>
                                 <div class="media-body">
-                                    <a href="#" class="text-default">+0123 456 789</a>
+                                    <a href="#" class="text-default"><?= env('CONTACT', '+0123 456 789')?></a>
                                 </div>
                             </div>
                         </div>
@@ -156,7 +168,7 @@
         <div class="circle3"></div>
         <div class="circle4"></div>
         <div class="container position-relative">
-            <img src="assets/images/banner-img.png" class="banner-image position-absolute" alt="banenr image">
+            <img src="{{ asset('assets/images/banner-img.png')}}" class="banner-image position-absolute" alt="banenr image">
             <div class="row">
                 <div class="col-md-12">
                     <div class="banenr-slider">
@@ -169,10 +181,10 @@
                                         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
                                     </p>
                                    <div class="xs-flex">
-                                        <a href="about-1.html" class="btn fadeInDown-slide animated  medim-btn btn-bordered-white mt-4 text-medium radius-pill bg-transparent text-active text-uppercase text-white">
+                                        <a href="#" class="btn fadeInDown-slide animated  medim-btn btn-bordered-white mt-4 text-medium radius-pill bg-transparent text-active text-uppercase text-white">
                                             About Us
                                         </a>
-                                        <a href="appointment.html" class="btn fadeInDown-slide animated no-border bg-transparent medim-btn grad-bg--3 solid-btn mt-4 text-medium radius-pill text-active text-uppercase text-white">
+                                        <a href="{{ Route('booking')}}" class="btn fadeInDown-slide animated no-border bg-transparent medim-btn grad-bg--3 solid-btn mt-4 text-medium radius-pill text-active text-uppercase text-white">
                                             Appoinment
                                         </a>
                                    </div>
@@ -784,7 +796,7 @@
                    </div>
                 </div>
             </div>
-            <div class="row">
+         <?php /*   <div class="row">
                 <div class="col-md-6">
                     <div  class="media align-items-center recent-post-wraper type-1">
                         
@@ -824,7 +836,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */ ?>
         </div>
      </section>
     <!-- End recent post Section -->
@@ -833,6 +845,15 @@
 
 @if (Route::is('home'))
     @yield('homeBanner')
+@elseif (Route::is('booking'))
+    @yield('booking')
+    <div class="container">
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                   <div class="text-center pb-75 ">
+                    </div>
+                </div>
+            </div>
 @endif
 
 

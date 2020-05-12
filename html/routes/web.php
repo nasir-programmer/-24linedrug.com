@@ -24,8 +24,13 @@ Route::get('service', function () {
 })->name('service');
 
 Route::get('contact', function () {
-    return view('welcome');
+    return view('contact');
 })->name('contact');
+
+
+Route::get('booking', function () {
+    return view('welcome');
+})->name('booking');
 
 Route::get('/cc', function(){
 Artisan::call('cache:clear');
