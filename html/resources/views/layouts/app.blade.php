@@ -1,23 +1,23 @@
 <!doctype html>
 <html lang="en">
-
+<!-- {{ asset('xxxxxx') }} -->
 <head>
   <base href="http://24linedrug.com">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Medim - Responsive Medical & Health Template</title>
+    <title>24 Line Drug</title>
     <!-- Favicons-->
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/images/apple-touch-icon-32x32.png') }}">
-    <link rel="shortcut icon" type="image/x-icon" sizes="72x72" href="assets/images/apple-touch-icon-72x72.png">
+    <link rel="shortcut icon" type="image/x-icon" sizes="72x72" href="{{ asset('assets/images/apple-touch-icon-72x72.png') }}">
 
     <!-- web fonts -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700%7CRoboto:400,500" rel="stylesheet"> 
     
     <!-- plugins css -->
-    <link rel="stylesheet" href="assets/css/plugins.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/plugins.css') }}">
     <!-- style css -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ asset('style.css') }}">
 </head>
 
 <body>
@@ -55,7 +55,7 @@
                                     <i class="icofont-envelope"></i>
                                 </div>
                                 <div class="media-body">
-                                    <a href="#" class="text-default text-Underline">mail@medim.com</a>
+                                    <a href="#" class="text-default text-Underline"><?= env('EMAIL', 'hoststudioz@gmail.com')?></a>
                                 </div>
                             </div>
                             <div class="media align-items-center d-inline-flex">
@@ -63,7 +63,7 @@
                                    <i class="icofont-ui-call"></i>
                                 </div>
                                 <div class="media-body">
-                                    <a href="#" class="text-default">+0123 456 789</a>
+                                    <a href="#" class="text-default"><?= env('CONTACT', '+919716942965')?></a>
                                 </div>
                             </div>
                         </div>
@@ -84,217 +84,27 @@
                 </div><!-- burger menu -->
 
                 <div class="collapse navbar-collapse bcbd_collpase_nav" id="navbarSupportedContent">
-
                     <div class="nav_outer  mr-auto">
                         <ul class="navbar-nav bcbd_nav mr-auto">
-                            <li class="nav-item active hs_dropdown">
-                                <a class="nav-link" href="#">Home  
+                        
+                             <li class="nav-item">
+                                <a class="nav-link" href="{{ Route('home')}}">   
+                                    Home
                                 </a>
-                                <ul class="bcbd_dropdown">
-                                    <li>
-                                        <a href="index.html">
-                                            Home-1
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="index-2.html">
-                                            Home-2
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="index-3.html">
-                                            Home-3
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="index-4.html">
-                                           Home-4
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item hs_dropdown">
-                                <a class="nav-link" href="about-1.html"> About </a>
-                                <ul class="bcbd_dropdown">
-                                    <li>
-                                        <a href="about-1.html">
-                                           About-1
-                                        </a>
-                                    </li>
-                                     <li>
-                                        <a href="about-2.html">
-                                           About-2
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item hs_dropdown">
-                                <a class="nav-link" href="#"> Services   </a>
-                                <ul class="bcbd_dropdown">
-                                    <li >
-                                        <a href="service-1.html">
-                                            Service-1
-                                        </a>
-                                    </li>
-                                    <li >
-                                        <a href="service-2.html">
-                                            Service-2
-                                        </a>
-                                    </li>
-                                     <li>
-                                        <a href="service-single.html">
-                                            Service-Single
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item hs_dropdown">
-                                <a class="nav-link" href="#"> Page </a>
-                                <div class="mega-menu s-10-80">
-                                    <ul class="grd-4">
-                                        <li class="nav-item  hs_dropdown">
-                                            <h6 class="nav-link mb-0">Pages</h6>
-                                            <ul class="bcbd_dropdown">
-                                                <li>
-                                                    <a href="faq.html">
-                                                        Faq
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="coming-soon.html">
-                                                        Comming Soon
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="about-1.html">
-                                                       About-1
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="about-2.html">
-                                                       About-2
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="nav-item  hs_dropdown">
-                                             <h6 class="nav-link mb-0">Pages</h6>
-                                            <ul class="bcbd_dropdown">
-                                                <li>
-                                                    <a href="department-1.html">
-                                                        Department-1
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="department-2.html">
-                                                        Department-2
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="appointment.html">
-                                                        Appointment
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="timetable.html">
-                                                       Timetable
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="nav-item  hs_dropdown">
-                                              <h6 class="nav-link mb-0">Pages</h6>
-                                            <ul class="bcbd_dropdown">
-                                                <li>
-                                                    <a href="doctors.html">
-                                                      Doctors
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="doctor-single.html">
-                                                        Doctor-Single
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="error-page.html">
-                                                        Error
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="testimonials.html">
-                                                       Testimonial
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="nav-item  hs_dropdown">
-                                              <h6 class="nav-link mb-0">Pages</h6>
-                                            <ul class="bcbd_dropdown">
-                                                <li>
-                                                    <a href="gallery-4-column.html">
-                                                        Gallery-4 Column
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="gallery-2-column.html">
-                                                        Gallery Masonary
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="gallery-3-column.html">
-                                                        Gallery Trending
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="pricing-plan.html">
-                                                       Pricing Plan
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="nav-item hs_dropdown">
-                                <a class="nav-link" href="#">  
-                                    Blog  
-                                </a>
-                                 <ul class="bcbd_dropdown">
-                                     <li>
-                                         <a href="blog-grid-1.html">
-                                            Blog Grid
-                                         </a>
-                                     </li>
-                                     <li>
-                                         <a href="blog-list-without-sidebar.html">
-                                            Blog List
-                                         </a>
-                                     </li>
-                                     <li>
-                                         <a href="blog-single-sidebar.html">
-                                            Blog list  Sidebar
-                                         </a>
-                                     </li>
-                                      <li>
-                                         <a href="blog-grid-style-2.html">
-                                            BLog Grid Style -2
-                                         </a>
-                                     </li>
-                                     <li>
-                                         <a href="blog-single-sidebar.html">
-                                            Blog Single Sidebar
-                                         </a>
-                                     </li> 
-                                     <li>
-                                         <a href="blog-single-without-sidebar.html">
-                                            Blog single widthout Sidebar
-                                         </a>
-                                     </li>
-                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="contact.html">   
-                                    Contact   
+                                <a class="nav-link" href="{{ Route('about')}}">   
+                                    About
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ Route('service')}}">   
+                                    Service
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ Route('contact')}}">   
+                                    Contact
                                 </a>
                             </li>
                         </ul> <!-- navbar nav -->
@@ -338,7 +148,7 @@
         </nav>
         <!-- Start Navigation Section -->
     </header>
-
+@section('homeBanner')
     <!-- Start Banner Section -->
     <div class="grad-bg--2 banenr position-relative type-1 no-overflows">
         <div class="circle"></div> 
@@ -375,7 +185,9 @@
         </div> <!-- container -->
     </div> <!-- Banenr Section -->
     <!-- Start Banner Section -->
+@endsection
 
+@section('aboutSection')
     <!-- Start About Section -->
     <section class="m-pt-140 m-pb-70 about-area type-1 position-relative" >
         <div class="container">
@@ -445,7 +257,9 @@
         </div> <!-- container -->
     </section> <!-- About Section -->
     <!-- Start About Section -->
+@endsection
 
+@section('departmentSection')
     <!-- Start Department Section -->
     <section class="m-bg-1 intro-area type-1 position-relative">
         <div class="intro-overlay position-absolute set-bg" data-bg="assets/images/intro-bg.jpg" ></div>
@@ -706,7 +520,9 @@
         </div>
     </section>
     <!-- Start Department Section -->
+@endsection
 
+@section('contentSection')
     <!-- Start Section -->
     <section class=" m-pb-140 m-pt-135 ">
         <div class="container">
@@ -858,7 +674,10 @@
         </div>
     </section>
     <!-- End Section -->
+@endsection
 
+
+@section('booking')
     <!-- Start About Section -->
     <section class="m-pt-135  position-relative set-bg" data-bg="assets/images/bg-img1.jpg">
         <div class="overlay op-P9"></div>
@@ -930,7 +749,7 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <p class="pt-2">
-                                                Please Call Us:  <a href="#" class="text-active d-inline-block pl-3 fz-poppins">+1234 567 890</a>
+                                                Please Call Us:  <a href="#" class="text-active d-inline-block pl-3 fz-poppins"><?= env('CONTACT', '+919716942965') ;?></a>
                                             </p>
                                         </div>
                                         <div class="col-md-6">
@@ -948,6 +767,10 @@
         </div>
     </section>
     <!-- Start About Section -->
+@endsection
+
+
+@section('recentPost')
 
     <!-- Start recent post Section -->
     <section class="m-bg-1 m-pt-275 m-pb-140 recent-post-area type-1">
@@ -1006,6 +829,14 @@
      </section>
     <!-- End recent post Section -->
 
+@endsection
+
+@if (Route::is('home'))
+    @yield('homeBanner')
+@endif
+
+
+@yield('content')
     <!-- Start footer -->
     <footer class="m-pt-140">
         <div class="container">
@@ -1014,7 +845,7 @@
                     <div class="footer-widget">
                         <div class="logo">
                             <a href="index.html" class="d-inline-block mb-5">
-                                    <img src="assets/images/logo.png" alt="">
+                                    <img src="{{ asset('assets/images/logo.png')}}" alt="">
                                 </a>
                         </div>
                         <p>
@@ -1023,15 +854,15 @@
                         <div class="media text-light-dark mb-3">
                             <i class="icofont-ui-touch-phone mr-2 mt-2 "></i>
                             <div class="media-body">
-                                <p class="m-0  fz-poppins">+(1234) 456 7890</p>
-                                <p class="m-0  fz-poppins">mail@medim.com</p>
+                                <p class="m-0  fz-poppins"><?= env('CONTACT', '+919716942965') ?></p>
+                                <p class="m-0  fz-poppins"><?= env('EMAIL', 'hoststudioz@gmail.com') ?></p>
                             </div>
                         </div>
                         <div class="media text-light-dark">
                             <i class="icofont-location-pin mr-2 mt-2 text-light-dark"></i>
                             <div class="media-body">
-                                <p class="m-0  fz-poppins">1234 North Luke Lane,</p>
-                                <p class="m-0  fz-poppins">South Bend, IN 360001</p>
+                                <p class="m-0  fz-poppins"><?= env('ADD1') ?>,</p>
+                                <p class="m-0  fz-poppins"><?= env('ADD2') ?></p>
                             </div>
                         </div>
                     </div>
@@ -1092,27 +923,10 @@
                             <li>
                                 <a href="#">
                                     <i class="icofont-caret-right"></i>
-                                    Make Appointment
+                                    Booking Medicine
                                 </a>
                             </li>
-                            <li>
-                                <a href="#">
-                                    <i class="icofont-caret-right"></i>
-                                    Our Services
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="icofont-caret-right"></i>
-                                     Recent Post
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="icofont-caret-right"></i>
-                                   Heart Surgery
-                                </a>
-                            </li>
+                           
                             <li>
                                 <a href="#">
                                     <i class="icofont-caret-right"></i>
@@ -1132,7 +946,7 @@
                     <div class="footer-widget">
                         <h5 class="text-dark footer-widget-title">Newsletter</h5>
                         <p>
-                            Lorem ipsum dolor sit amet, conse ctetu Aenean commodo .
+                            Subscribe our Newslatter
                         </p>
                         <div class="input-group  d-flex align-items-center">
                             <input type="text" class="form-control" placeholder="Enter mail" aria-label="Enter mail" aria-describedby="button-addon2">
@@ -1143,18 +957,27 @@
                             </div>
                         </div>
                         <div class="social-icon circle-link position-relative">
-                            <a href="#" class="text-default rounded-circle s-dp-1-3-15">
+                        @if(env('FACEBOOK'))
+                        <a href="<?= env('FACEBOOK') ?>" class="text-default rounded-circle s-dp-1-3-15">
                                     <i class="icofont-facebook"></i>
-                                </a>
-                            <a href="#" class="text-default rounded-circle s-dp-1-3-15">
+                        </a>
+                        @endif
+
+                        @if(env('TWITTER'))
+                        <a href="<?= env('TWITTER') ?>" class="text-default rounded-circle s-dp-1-3-15">
                                     <i class="icofont-twitter"></i>
-                                </a>
-                            <a href="#" class="text-default rounded-circle s-dp-1-3-15">
+                        </a>  
+                        @endif              
+                        @if(env('INSTAGRAM'))
+                            <a href="<?= env('INSTAGRAM')?>" class="text-default rounded-circle s-dp-1-3-15">
                                     <i class="icofont-instagram"></i>
                                 </a>
-                            <a href="#" class="text-default rounded-circle s-dp-1-3-15">
+                        @endif
+                        @if(env('PINTEREST'))
+                            <a href="<?= env('PINTEREST')?>" class="text-default rounded-circle s-dp-1-3-15">
                                     <i class="icofont-pinterest"></i>
                                 </a>
+                        @endif    
                         </div>
                     </div>
                 </div>
@@ -1179,11 +1002,11 @@
     <!-- End  scroll-top Section -->
 
     <!-- js file -->
-    <script src="assets/js/jquery-2.2.4.min.js"></script>
+    <script src="{{ asset('assets/js/jquery-2.2.4.min.js') }}"></script>
        <!-- plugins js -->
-    <script src="assets/js/plugins.js"></script>
+    <script src="{{ asset('assets/js/plugins.js') }}"></script>
        <!-- main js -->
-    <script src="assets/js/main.js"></script>
+    <script src="{{ asset('assets/js/main.js') }}"></script>
 </body>
 
 </html>
