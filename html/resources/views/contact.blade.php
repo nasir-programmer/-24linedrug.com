@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<section class=" position-relative set-bg breadcrumb-container" data-bg="assets/images/breadcrumb-img1.jpg">
+<section class=" position-relative set-bg breadcrumb-container" data-bg="{{ asset('assets/images/breadcrumb-img1.jpg') }}">
         <div class="overlay op-P9"></div>
         <div class="container">
             <div class="row">
@@ -10,7 +10,7 @@
 						<h3 class="semi-bold text-uppercase text-white">contact</h3>
 						<nav aria-label="breadcrumb">
 						    <ol class="breadcrumb bg-transparent mb-0 pl-0 p-0">
-						        <li class="breadcrumb-item active"><a href="index.html">Home</a></li>
+						        <li class="breadcrumb-item active"><a href="{{ route('home')}}">Home</a></li>
 						        <li class="breadcrumb-item " aria-current="page"><a href="#">contact</a></li>
 						    </ol>
 						</nav>
@@ -74,7 +74,7 @@
 							<div class="media ">
 							    <i class="icofont-location-pin mr-2 mt-2 "></i>
 							    <div class="media-body">
-							        <p class="m-0  fz-poppins"><?= env('EMAIL', 'jon@medim.com')?></p>
+							        <p class="m-0  fz-poppins"><?= env('EMAIL', 'info@24linedrug.com')?></p>
 							    </div>
 							</div>
 							<div class="media ">

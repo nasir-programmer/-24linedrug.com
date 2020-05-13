@@ -16,11 +16,11 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('about', function () {
-    return view('welcome');
+    return view('about');
 })->name('about');
 
 Route::get('service', function () {
-    return view('welcome');
+    return view('service');
 })->name('service');
 
 Route::get('contact', function () {
