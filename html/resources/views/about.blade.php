@@ -35,7 +35,7 @@
                         We Are
                     </h2>
                     <p class="mb-4">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                        Revolutionary Approach to Service India’s Healthcare Industry,One Stop for All Your Health Needs-24 hours, 7 days a week & 365 days a year..!
                     </p>
                     <div class="media align-items-center text-medium">
                         <i class="icofont-check-circled mr-3 text-active"></i>
